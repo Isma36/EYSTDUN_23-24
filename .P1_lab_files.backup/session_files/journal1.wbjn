@@ -1,0 +1,42 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+matl1 = material1.Duplicate(TargetContainer=engineeringData1)
+matlProp1 = matl1.GetProperty(Name="Tensile Yield Strength")
+matlProp1.SetData(
+    Variables=["Tensile Yield Strength"],
+    Values=[["350000000 [Pa]"]])
+matlProp2 = matl1.GetProperty(Name="Compressive Yield Strength")
+matlProp2.SetData(
+    Variables=["Compressive Yield Strength"],
+    Values=[["350000000 [Pa]"]])
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsDiscoveryGeometry=True)
+geometryComponent1 = system1.GetComponent(Name="Geometry")
+geometryComponent1.Reset()
+system1.Delete()
+system2 = template1.CreateSystem()
+engineeringData2 = system2.GetContainer(ComponentName="Engineering Data")
+material2 = engineeringData2.GetMaterial(Name="Structural Steel")
+matl2 = material2.Duplicate(TargetContainer=engineeringData2)
+matlProp3 = matl2.GetProperty(Name="Tensile Yield Strength")
+matlProp3.SetData(
+    Variables=["Tensile Yield Strength"],
+    Values=[["350000000 [Pa]"]])
+matlProp4 = matl2.GetProperty(Name="Compressive Yield Strength")
+matlProp4.SetData(
+    Variables=["Compressive Yield Strength"],
+    Values=[["350000000 [Pa]"]])
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath="C:/Users/ismae/OneDrive - Universidad de Alcala/Escritorio/UNI/Tercero/Estructura y systema térmico/P1_lab/Exomars_Drill.stp")
+modelComponent1 = system2.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system2.GetContainer(ComponentName="Model")
+model1.Edit()
+Save(Overwrite=True)
