@@ -833,6 +833,12 @@
           <Name>Temperature</Name>
           <Units name="Temperature" />
         </ParameterDetails>
+        <ParameterDetails id="pa30">
+          <Name>Damping Ratio</Name>
+        </ParameterDetails>
+        <ParameterDetails id="pa31">
+          <Name>Constant Structural Damping Coefficient</Name>
+        </ParameterDetails>
         <ParameterDetails id="pa9">
           <Name>Tensile Yield Strength</Name>
           <Units name="Stress" />
@@ -909,12 +915,6 @@
         </ParameterDetails>
         <ParameterDetails id="pa29">
           <Name>Relative Permeability</Name>
-        </ParameterDetails>
-        <ParameterDetails id="pa30">
-          <Name>Damping Ratio</Name>
-        </ParameterDetails>
-        <ParameterDetails id="pa31">
-          <Name>Constant Structural Damping Coefficient</Name>
         </ParameterDetails>
         <PropertyDetails id="pr0">
           <Name>Color</Name>

@@ -772,14 +772,6 @@
             </Unit>
           </Units>
         </ParameterDetails>
-        <ParameterDetails id="pa11">
-          <Name>Coefficient of Thermal Expansion</Name>
-          <Units name="InvTemp1">
-            <Unit power="-1">
-              <Name>C</Name>
-            </Unit>
-          </Units>
-        </ParameterDetails>
         <ParameterDetails id="pa12">
           <Name>Zero-Thermal-Strain Reference Temperature</Name>
           <Units name="Temperature">
@@ -821,6 +813,26 @@
           <Units name="Stress">
             <Unit>
               <Name>Pa</Name>
+            </Unit>
+          </Units>
+        </ParameterDetails>
+        <ParameterDetails id="pa29">
+          <Name>Relative Permeability</Name>
+          <Unitless />
+        </ParameterDetails>
+        <ParameterDetails id="pa30">
+          <Name>Damping Ratio</Name>
+          <Unitless />
+        </ParameterDetails>
+        <ParameterDetails id="pa31">
+          <Name>Constant Structural Damping Coefficient</Name>
+          <Unitless />
+        </ParameterDetails>
+        <ParameterDetails id="pa11">
+          <Name>Coefficient of Thermal Expansion</Name>
+          <Units name="InvTemp1">
+            <Unit power="-1">
+              <Name>C</Name>
             </Unit>
           </Units>
         </ParameterDetails>
@@ -912,18 +924,6 @@
               <Name>Pa</Name>
             </Unit>
           </Units>
-        </ParameterDetails>
-        <ParameterDetails id="pa29">
-          <Name>Relative Permeability</Name>
-          <Unitless />
-        </ParameterDetails>
-        <ParameterDetails id="pa30">
-          <Name>Damping Ratio</Name>
-          <Unitless />
-        </ParameterDetails>
-        <ParameterDetails id="pa31">
-          <Name>Constant Structural Damping Coefficient</Name>
-          <Unitless />
         </ParameterDetails>
         <PropertyDetails id="pr0">
           <Unitless />
