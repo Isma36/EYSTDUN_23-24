@@ -1,0 +1,17 @@
+/COM,ANSYS RELEASE 2024 R1           BUILD 24.1      UP20231106       13:55:43
+
+ *** WARNING ***                         CP =       0.344   TIME= 13:55:44
+ Element shape checking is currently inactive.  Issue SHPP,ON or         
+ SHPP,WARN to reactivate, if desired.                                    
+
+ *** WARNING ***                         CP =       0.641   TIME= 13:55:44
+ Node 19465 connects both contact element 42764 and target element       
+ 44840.  Please check the model carefully.                               
+
+ *** WARNING ***                         CP =       0.688   TIME= 13:55:44
+ Maximum contact stiffness 1.066524331E+16 is too big which can cause an 
+ accuracy problem, you may scale the force units in the model.           
+
+ *** WARNING ***                         CP =       1.172   TIME= 13:55:44
+ Node 19465 connects both contact element 42764 and target element       
+ 44840.  Please check the model carefully.                               

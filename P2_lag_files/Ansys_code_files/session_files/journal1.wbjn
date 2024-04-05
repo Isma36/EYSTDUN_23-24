@@ -1,0 +1,25 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(
+    TemplateName="Modal",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+matl1 = material1.Duplicate(TargetContainer=engineeringData1)
+matl1.DisplayName = "Móvil"
+matlProp1 = matl1.GetProperty(Name="Density")
+matlProp1.SetData(
+    Variables=["Density"],
+    Values=[["1392 [kg m^-3]"]])
+matlProp2 = material1.CreateProperty(
+    Name="Material Dependent Damping",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Damping Ratio"],
+    Values=[["0.003"]])
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("GitHub/EYSTDUN_23-24/P2_lag_files/Pletina_Movil.stp"))
+Save(Overwrite=True)
